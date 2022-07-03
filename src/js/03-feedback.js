@@ -7,10 +7,11 @@ const textarea = document.querySelector('textarea');
 const LOCAL_KEY = 'feedback-form-state';
 const input = document.querySelector('input');
 
-form.addEventListener('input', throttle(onTextareaInput, 500));
+input.addEventListener('input', throttle(onTextareaInput, 500));
+textarea.addEventListener('input', throttle(onTextareaInput, 500));
 form.addEventListener('submit', onSubmitButton);
 
-function onTextareaInput(event) {
+function onTextareaInput() {
   localStorage.setItem(
     LOCAL_KEY,
     JSON.stringify({
