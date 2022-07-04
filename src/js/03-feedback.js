@@ -25,7 +25,7 @@ function onSubmitButton(event) {
   event.preventDefault();
   console.log(JSON.parse(localStorage.getItem(LOCAL_KEY)));
   form.reset();
-  localStorage.clear();
+  localStorage.removeItem(LOCAL_KEY);
 }
 function onData() {
   const data = JSON.parse(localStorage.getItem(LOCAL_KEY));
