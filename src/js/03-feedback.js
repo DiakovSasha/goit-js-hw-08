@@ -20,7 +20,6 @@ function onTextareaInput() {
     })
   );
 }
-
 function onSubmitButton(event) {
   event.preventDefault();
   console.log(JSON.parse(localStorage.getItem(LOCAL_KEY)));
@@ -33,6 +32,6 @@ function onData() {
     input.value = data.email;
     textarea.value = data.message;
   }
-  return;
+  
 }
 onData();
